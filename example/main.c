@@ -15,7 +15,7 @@ int main(void) {
 	DCOCTL = CALDCO_16MHZ;
 
 	// initialize LED strip
-	initStrip();
+	initStrip();			// ***** HAVE YOU SET YOUR NUM_LEDS DEFINE IN WS2812.C? ******
 
 	// set strip color red
 	fillStrip(0xFF, 0x00, 0x00);
