@@ -1,7 +1,7 @@
 MSP430 NeoPixel/WS2812 C Library
 ================================
 
-An easy to use library for controlling WS2812 LEDs (branded by Adafruit as NeoPixels) with an MSP430 microcontroller. The library is heavily based off of Adafruit's NeoPixel library.
+An easy to use library for controlling WS2812 LEDs (branded by Adafruit as NeoPixels) with an MSP430 microcontroller. The library is syntactically based off of Adafruit's NeoPixel library.
 
 ## Instructions
 
