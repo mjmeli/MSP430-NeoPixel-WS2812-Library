@@ -51,7 +51,7 @@ void showStrip(){
 			while(mask != 0){
 				while (!(IFG2 & UCB0TXIFG));	// wait to transmit
 
-				if (rgb[j] & mask){				// most significant bit first
+				if (rgb[j] & mask){			// most significant bit first
 					UCB0TXBUF = HIGH_CODE;		// send 1
 				}
 				else {
