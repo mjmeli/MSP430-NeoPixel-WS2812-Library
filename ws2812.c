@@ -70,14 +70,14 @@ void showStrip(){
 
 // Clear the color of all LEDs (make them black/off)
 void clearStrip(){
-	fillStrip(0x00, 0x00, 0x00);
+	fillStrip(0x00, 0x00, 0x00);	// black
 }
 
 // Fill the strip with a solid color. This will update the strip.
 void fillStrip(u_char r, u_char g, u_char b){
 	int i;
 	for (i = 0; i < NUM_LEDS; i++){
-		setLEDColor(i, r, g, b);		// set all colors black
+		setLEDColor(i, r, g, b);		// set all LEDs to specified color
 	}
 	showStrip();						// refresh strip
 }
