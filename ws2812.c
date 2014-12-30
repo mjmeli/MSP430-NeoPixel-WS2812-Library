@@ -36,10 +36,9 @@ void setLEDColor(u_int p, u_char r, u_char g, u_char b){
 // Send colors to the strip and show them. Disables interrupts while processing.
 void showStrip(){
 	__bic_SR_register(GIE);       	// disable interrupts
-
-	int i, j;
-
+	
 	// send RGB color for every LED
+	int i, j;
 	for (i = 0; i < NUM_LEDS; i++){
 		u_char rgb[3] = {leds[i].green, leds[i].red, leds[i].blue};	// get RGB color for this LED
 
