@@ -1,5 +1,5 @@
 #include <msp430.h>
-#include "w2812.h"
+#include "ws2812.h"
 
 typedef struct {
 	u_char red;
