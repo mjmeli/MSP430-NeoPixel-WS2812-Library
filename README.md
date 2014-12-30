@@ -15,7 +15,7 @@ Before working with the strip, call **initStrip()**. This configures the SPI mod
 
 Call **setLEDColor()** to change the color of a specific pixel, 0 indexed from the start of the strip.
 
-To actually display your colors, you need to call **showStrip()**. This function disables interrupts to ensure timing requirements are kept.
+To actually display your colors, you need to call **showStrip()**. This function temporarily disables interrupts to ensure timing requirements are kept.
 
 Connect the data line for your strip to the B SIMO pin for your MSP430. This library is written with the belief that this pin is 1.7, which it is on the Launchpad. Modify the define for **OUTPUT_PIN** and make sure the code in initStrip() is for the correct port if your processor differs. Don't forget to attach a 300-500 Ohm resistor on the data line.
 
