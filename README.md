@@ -27,7 +27,7 @@ This software library drives the LEDs by taking advantage of the SPI module, whi
 
 #### Clock Speed
 
-The timing requirements for the WS2812 LEDs are very tight. As such, this requires a relatively high speed SPI clock (this uses ~5.3 MHz) and an even higher CPU clock. **Set the DCO clock to 16 MHz to use this library**. If you which to use a different clock speed (you can use higher), you will have to modify the the SPI clock's modulation in initStrip().
+The timing requirements for the WS2812 LEDs are very tight. As such, this requires a relatively high speed SPI clock (this uses ~5.3 MHz) and an even higher CPU clock. **Set the DCO clock to 16 MHz to use this library**. If you wish to use a different clock speed (you can use higher as long as the SPI clock can be modulated to an appropiate frequency), you will have to modify the the SPI clock's modulation in initStrip().
 
 #### Device Compatibility
 
