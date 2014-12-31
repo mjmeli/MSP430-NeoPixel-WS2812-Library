@@ -32,7 +32,3 @@ The timing requirements for the WS2812 LEDs are very tight. As such, this requir
 #### Device Compatibility
 
 The library was written to work on the MSP430G2553, which comes with the G2 Launchpad. The code should be able to be modified to work on most other MSP430 devices with a clock speed of at least 16 MHz. This will possibly require you to modify the SPI configuration in initStrip().
-
-## Coming Soon
-
-I will be checking compatibility with an MSP430FR series device (FR5739). The bulk of the code should remain the same, just have to check SPI configuration.
