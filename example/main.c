@@ -1,5 +1,5 @@
 #include <msp430.h> 
-#include "w2812.h"
+#include "ws2812.h"
 
 void gradualFill(u_int n, u_char r, u_char g, u_char b);
 
