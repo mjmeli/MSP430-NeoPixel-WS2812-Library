@@ -8,7 +8,7 @@ typedef struct {
     u_char blue;
 } LED;
 
-LED leds[NUM_LEDS] = { { 0, 0, 0 } };
+static const LED leds[NUM_LEDS] = { { 0, 0, 0 } };
 
 // Initializes everything needed to use this library. This clears the strip.
 void initStrip() {
@@ -34,7 +34,7 @@ void showStrip() {
     __bic_SR_register(GIE);           // disable interrupts
 
     // send RGB color for every LED
-    int i, j;
+    unsigned int i, j;
     for (i = 0; i < NUM_LEDS; i++) {
         u_char *rgb = (u_char *)&leds[i]; // get GRB color for this LED
 
