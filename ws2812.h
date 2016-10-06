@@ -1,10 +1,10 @@
 // Useful typedefs
-typedef unsigned char u_char;		// 8 bit
-typedef unsigned int u_int;			// 16 bit
+typedef unsigned char u_char;	// 8 bit
+typedef unsigned int u_int;     // 16 bit
 
 // Transmit codes
-#define HIGH_CODE	(0xF0)			// b11110000
-#define LOW_CODE	(0xC0)			// b11000000
+#define HIGH_CODE	(0xF0)      // b11110000
+#define LOW_CODE    (0xC0)      // b11000000
 
 // Configure processor to output to data strip
 void initStrip(void);
