@@ -3,7 +3,7 @@
 
 // WS2812 takes GRB format
 typedef struct {
-	u_char green;
+    u_char green;
     u_char red;
     u_char blue;
 } LED;
