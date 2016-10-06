@@ -3,7 +3,7 @@
 
 // WS2812 takes GRB format
 typedef struct {
-	u_char green;
+    u_char green;
     u_char red;
     u_char blue;
 } LED;
@@ -31,7 +31,7 @@ void setLEDColor(u_int p, u_char r, u_char g, u_char b) {
 
 // Send colors to the strip and show them. Disables interrupts while processing.
 void showStrip() {
-    __bic_SR_register(GIE);           // disable interrupts
+    __bic_SR_register(GIE);  // disable interrupts
 
     // send RGB color for every LED
     unsigned int i, j;
