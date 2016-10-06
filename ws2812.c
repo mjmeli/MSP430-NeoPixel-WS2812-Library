@@ -22,7 +22,6 @@ void initStrip() {
     UCB0BR0 = 3;            // 16 MHz / 3 = .1875 us per bit
     UCB0BR1 = 0;
     UCB0CTL1 &= ~UCSWRST;   // Initialize USCI state machine
-
     clearStrip();           // clear the strip
 }
 
@@ -50,7 +49,6 @@ void showStrip() {
             while (mask != 0) {
                 while (!(IFG2 & UCB0TXIFG))
                     ;    // wait to transmit
-
                 if (rgb[j] & mask) {        // most significant bit first
                     UCB0TXBUF = HIGH_CODE;  // send 1
                 } else {
