@@ -5,11 +5,11 @@ An easy to use library for controlling WS2812 LEDs (branded by Adafruit as NeoPi
 
 ## Instructions
 
-Use of this library is simple. You will need the ws2812 source and header file in your project, as well as your MSP430.h header file that you should already have. 
+Use of this library is simple. You will need the ws2812 source and header file in your project, as well as your MSP430.h header file that you should already have.
 
 Set your CPU's clock speed to **16 MHz**.
 
-In ws2812.c, modify the define for **NUM_LEDS** to the number of LEDs you have.
+In ws2812.h, modify the define for **NUM_LEDS** to the number of LEDs you have.
 
 Before working with the strip, call **initStrip()**. This configures the SPI module to operate at the necessary speed. It will also clear the strip to start.
 

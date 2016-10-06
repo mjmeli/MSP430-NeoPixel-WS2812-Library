@@ -7,10 +7,6 @@ typedef struct {
     u_char blue;
 } LED;
 
-#define OUTPUT_PIN	(0x80)	// Set to whatever UCB0SIMO is on your processor (Px.7 here)
-
-#define NUM_LEDS    (60)    // NUMBER OF LEDS IN YOUR STRIP
-
 LED leds[NUM_LEDS] = { { 0, 0, 0 } };
 
 // Initializes everything needed to use this library. This clears the strip.
@@ -39,7 +35,7 @@ void showStrip() {
     // send RGB color for every LED
     int i, j;
     for (i = 0; i < NUM_LEDS; i++) {
-        u_char rgb[3] = { leds[i].green, leds[i].red, leds[i].blue };// get RGB color for this LED
+        u_char rgb[3] = { leds[i].green, leds[i].red, leds[i].blue }; // get RGB color for this LED
 
         // send green, then red, then blue
         for (j = 0; j < 3; j++) {
