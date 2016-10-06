@@ -8,7 +8,7 @@ typedef struct {
     u_char blue;
 } LED;
 
-static const LED leds[NUM_LEDS] = { { 0, 0, 0 } };
+static LED leds[NUM_LEDS] = { { 0, 0, 0 } };
 
 // Initializes everything needed to use this library. This clears the strip.
 void initStrip() {
