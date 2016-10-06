@@ -1,0 +1,7 @@
+# CCS project files
+.ccsproject
+.cproject
+.project
+.settings/
+*.cmd
+targetConfigs/
