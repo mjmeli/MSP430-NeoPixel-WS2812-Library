@@ -1,9 +1,10 @@
 #include <msp430.h>
 #include "ws2812.h"
 
+// WS2812 takes GRB format
 typedef struct {
+	u_char green;
     u_char red;
-    u_char green;
     u_char blue;
 } LED;
 
@@ -23,8 +24,8 @@ void initStrip() {
 
 // Sets the color of a certain LED (0 indexed)
 void setLEDColor(u_int p, u_char r, u_char g, u_char b) {
+	leds[p].green = g;
     leds[p].red = r;
-    leds[p].green = g;
     leds[p].blue = b;
 }
 
@@ -35,7 +36,7 @@ void showStrip() {
     // send RGB color for every LED
     int i, j;
     for (i = 0; i < NUM_LEDS; i++) {
-        u_char rgb[3] = { leds[i].green, leds[i].red, leds[i].blue }; // get RGB color for this LED
+        u_char *rgb = (u_char *)&leds[i]; // get GRB color for this LED
 
         // send green, then red, then blue
         for (j = 0; j < 3; j++) {
